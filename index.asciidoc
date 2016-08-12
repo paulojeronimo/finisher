@@ -17,10 +17,6 @@ Paulo Jerônimo (PJ), 11/Ago/2016
 :uri-finishertech: http://finisher.tech
 :finisherguru: {uri-finisherguru}[finisher.guru]
 :finishertech: {uri-finishertech}[finisher.tech]
-:uri-eu-e-tadeu: https://www.instagram.com/p/BFeR1SjNfww/
-:uri-tatianavasconcelos: https://www.instagram.com/tatifvbsb
-:uri-livro-ironman: https://github.com/paulojeronimo/livro-ironman
-:uri-amigos-da-natacao: https://www.instagram.com/p/BDi1R7otf68/
 :geek: https://pt.wikipedia.org/wiki/Geek[geek]
 :nerd: https://pt.wikipedia.org/wiki/Nerd[nerd]
 :cc: https://br.creativecommons.org/[Creative Commons]
@@ -117,10 +113,10 @@ image::pj-medalhas-relevantes.jpg[caption="", link="https://www.instagram.com/p/
 * Porque esses projetos me deixarão *focado* para atingir minhas metas
 * Porque eu estarei:
 ** *Desenvolvendo soluções* para algo que amo (esportes)
-** *Produzindo conteúdo* para o livro {uri-livro-ironman}["Ironman: Pensamentos e Atitudes"]
+** *Produzindo conteúdo* para o livro https://github.com/paulojeronimo/livro-ironman["Ironman: Pensamentos e Atitudes"]
 ** *Ajudando pessoas* que me ajudam:
-*** {uri-eu-e-tadeu}[Meu amigo treinador] e {uri-tatianavasconcelos}[minha nutricionista]
-*** Outros atletas (principalmente os {uri-amigos-da-natacao}[meus amigos da natação])
+*** https://www.instagram.com/p/BFeR1SjNfww/[Meu amigo treinador] e https://www.instagram.com/tatifvbsb[minha nutricionista]
+*** Outros atletas (principalmente os https://www.instagram.com/p/BDi1R7otf68/[meus amigos da natação])
 *** Outros desenvolvedores
 
 == \\
@@ -136,7 +132,7 @@ image::pj-desenvolvedor-atleta.jpg[caption="Desenvolvedor atleta: algumas provas
 ** Até *17/Ago/2016*:
 *** Reprojetar a arquitetura dos sites com tecnologias JavaScript (e/ou CoffeeScript)
 **** https://mongodb.org[MongoDB], http://expressjs.com/[Express], (https://angular.io/[Angular 2] + http://ionicframework.com/docs/v2/[Ionic 2]) ou https://onsen.io/[Onsen] ou ...
-*** Repulicar o site {finisherguru} com essa nova arquitetura
+*** Republicar o site {finisherguru} com essa nova arquitetura
 *** Publicar a primeira versão do site {finishertech}
 
 == \\
@@ -173,11 +169,5 @@ image::pj-desenvolvedor-atleta.jpg[caption="Desenvolvedor atleta: algumas provas
 
 [role="footer"]
 http://github.com/paulojeronimo/finisher
-
-////
-Links ...
-Relato sobre o Ironman Nice 2014: https://www.facebook.com/photo.php?fbid=757943984228558&set=pb.100000388908507.-2207520000.1470926064.&type=3&theater
-Build a Mobile App with Angular 2 and Ionic 2: https://scotch.io/tutorials/build-a-mobile-app-with-angular-2-and-ionic-2
-////
 
 // vim: set syntax=asciidoc:
