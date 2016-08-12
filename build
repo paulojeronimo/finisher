@@ -75,7 +75,19 @@ clean() {
   rm -f images/presentation-qrcode.png
 }
 
-publish() {
+publish_on_github() {
+  local msg="Publicação em `date +"%d/%m/%Y às %H:%M:%S"`"
+
+  cd "$PUBLISH"
+  git commit -am "$msg"
+  git push origin HEAD:gh-pages
+  cd ..
+  git add "`basename "$PUBLISH"`"
+  git commit -m "$msg"
+  git push
+}
+
+publish_with_rsync() {
   build
 
   [ "$PUBLISH" ] || { echo "PUBLISH não configurado!"; return; }
