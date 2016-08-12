@@ -76,8 +76,9 @@ clean() {
 }
 
 publish_on_github() {
-  local msg="Publicação em `date +"%d/%m/%Y às %H:%M:%S"`"
+  publish_with_rsync
 
+  local msg="Publicação em `date +"%d/%m/%Y às %H:%M:%S"`"
   cd "$PUBLISH"
   git commit -am "$msg"
   git push origin HEAD:gh-pages
