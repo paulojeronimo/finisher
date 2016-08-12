@@ -1,0 +1,4 @@
+[submodule "published"]
+	path = published
+	url = https://github.com/paulojeronimo/finisher
+	branch = gh-pages
