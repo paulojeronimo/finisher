@@ -93,7 +93,7 @@ publish_with_rsync() {
 
   [ "$PUBLISH" ] || { echo "PUBLISH não configurado!"; return; }
   [ -d "$PUBLISH" ] || mkdir -p "$PUBLISH"
-  rsync -av --update --delete "$TARGET"/ "$PUBLISH"/
+  rsync -av --update --delete --exclude '.git' "$TARGET"/ "$PUBLISH"/
 }
 
 cd "$BASEDIR"
