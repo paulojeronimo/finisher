@@ -16,6 +16,7 @@ do
     source "$conf" && break || exit 1
   fi
 done
+[ "$DZSLIDES_BACKEND" ] || { echo "DZSLIDES_BACKEND não configurado!"; exit; }
 [ "$DZSLIDES" ] || { echo "DZSLIDES não configurado!"; exit; }
 [ "$TARGET" ] || { echo "TARGET não configurado!"; exit; }
 
@@ -47,8 +48,7 @@ prepare() {
   mkdir -p ~/.asciidoc/backends && cd $_
   if ! [ -d dzslides ]
   then
-      git clone git://github.com/mojavelinux/asciidoc-dzslides-backend.git dzslides
-      cd dzslides
+      git clone $DZSLIDES_BACKEND dzslides && cd $_
       git clone $DZSLIDES
   fi
   popd &> /dev/null
@@ -76,26 +76,46 @@ clean() {
   rm -f images/presentation-qrcode.png
 }
 
-publish_on_github() {
+create_gh_pages_branch() {
+  git checkout --orphan gh-pages
+  rm -rf *
+  git rm -rf .
+  echo 'Página inicial' > index.html
+  git add .
+  git commit -m 'Commit inicial'
+  git checkout master
+  git push -u origin gh-pages
+  git submodule add -b gh-pages `git config --get remote.origin.url` "$PUBLISHED"
+  git add .
+  git commit -m 'Adicionada a branch gh-pages'
+  git push
+}
+
+publish_on_gh_pages() {
   publish_with_rsync
 
   local msg="Publicação em `date +"%d/%m/%Y às %H:%M:%S"`"
-  cd "$PUBLISH"
+  cd "$PUBLISHED"
   git add .
   git commit -m "$msg"
   git push origin HEAD:gh-pages
   cd ..
-  git add "`basename "$PUBLISH"`"
+  git add "`basename "$PUBLISHED"`"
   git commit -m "$msg"
   git push
 }
 
 publish_with_rsync() {
-  build
+  [ "$PUBLISHED" ] || { echo "PUBLISHED não configurado!"; return; }
+  [ -d "$PUBLISHED" ] || mkdir -p "$PUBLISHED"
+  [ -d "$TARGET" ] || { echo "O diretório \"$TARGET\" não existe!"; return; }
+  rsync -av --update --delete --exclude '.git' "$TARGET"/ "$PUBLISHED"/
+}
 
-  [ "$PUBLISH" ] || { echo "PUBLISH não configurado!"; return; }
-  [ -d "$PUBLISH" ] || mkdir -p "$PUBLISH"
-  rsync -av --update --delete --exclude '.git' "$TARGET"/ "$PUBLISH"/
+server() {
+  cd "$TARGET" &>/dev/null
+  python -m SimpleHTTPServer
+  cd - &> /dev/null
 }
 
 cd "$BASEDIR"

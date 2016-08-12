@@ -79,8 +79,7 @@ ____
 Camisetas! :D - Preta (http://www.powermanbrasil.com.br[Powerman Brasil 2016]) ↓ e Branca (https://www.instagram.com/p/BET1l5otf9G/[TH3])
 
 [role='middle']
-image::pj-powerman.jpg[]
-
+image::pj-powerman.jpg[width="50%"]
 
 == \\
 

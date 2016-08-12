@@ -20,6 +20,10 @@ As configurações de diretórios padrão estão no arquivo [build.conf.sample].
 
   ./build clean
 
+## Visualização local dos slides
+
+  ./build server
+
 ## Aprenda mais ...
 
 Os slides deste repositório foram escritos no [formato AsciiDoc][asciidoc]. Outros bons exemplos de como fazer a escrita de slides nesse formato podem são os seguintes:
