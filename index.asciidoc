@@ -1,0 +1,184 @@
+*finisher.(guru|tech)*
+======================
+Paulo Jerônimo (PJ), 11/Ago/2016
+:title: finisher.(guru|tech)
+:copyright: CC BY-SA 2.0
+:slidesurl: http://paulojeronimo.github.io/finisher
+:imagesdir: images
+:backend: dzslides
+:linkcss: true
+:dzslides-style: stormy
+:dzslides-transition: fade
+:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
+:syntax: no-highlight
+
+:PJ: Paulo Jerônimo
+:uri-finisherguru: http://finisher.guru
+:uri-finishertech: http://finisher.tech
+:finisherguru: {uri-finisherguru}[finisher.guru]
+:finishertech: {uri-finishertech}[finisher.tech]
+:uri-eu-e-tadeu: https://www.instagram.com/p/BFeR1SjNfww/
+:uri-tatianavasconcelos: https://www.instagram.com/tatifvbsb
+:uri-livro-ironman: https://github.com/paulojeronimo/livro-ironman
+:uri-amigos-da-natacao: https://www.instagram.com/p/BDi1R7otf68/
+:geek: https://pt.wikipedia.org/wiki/Geek[geek]
+:nerd: https://pt.wikipedia.org/wiki/Nerd[nerd]
+:cc: https://br.creativecommons.org/[Creative Commons]
+
+[{topic}]
+== {slidesurl}
+
+['qrcode', target='presentation-qrcode.png', size=20, alt='{slidesurl}', role='middle stretch-y']
+----
+http://paulojeronimo.github.io/finisher
+----
+
+== \\
+
+[quote, {PJ}]
+____
+*Finisher*: alguém *determinado* a cruzar uma linha de chegada, sendo *persistente* mesmo em más condições, no intuito de atingir suas *metas*.
+____
+
+[{intro}]
+== ... cruzar uma *linha de chegada*
+
+== \\
+
+image::pj-ironman-florianopolis-2013.jpg[caption="Linha de Chegada - Ironman Florianópolis 2013", link="https://www.instagram.com/p/aORATRtf04/"]
+
+[{intro}]
+== sendo *persis tente* mesmo em más condições ...
+
+== \\
+
+image::gabrielle-andersen.jpg[caption=""]
+
+== \\
+
+[quote, Gabrielle Andersen - 2h48min42s nas Olimpíadas de Los Angeles em 1984]
+____
+http://globoesporte.globo.com/programas/esporte-espetacular/noticia/2016/07/suica-volta-ao-estadio-onde-quase-desmaiou-na-maratona-olimpica-de-84.html[Se você está realmente determinado, você pode realizar muito mais do que você pensa]
+____
+
+[{intro}]
+== *Projetos*
+
+== \\
+
+* *{finisherguru}* - foco em pensamentos, atitudes, hábitos
+* *{finishertech}* - foco em tecnologia
+* Para ambos:
+** Conteúdo disponibilizado em {cc} e/ou https://pt.wikipedia.org/wiki/Licen%C3%A7a_de_software_livre[licenças de software livre]
+
+[{intro}]
+== finisher.*guru*
+
+== \\
+
+Camisetas! :D - Preta (http://www.powermanbrasil.com.br[Powerman Brasil 2016]) ↓ e Branca (https://www.instagram.com/p/BET1l5otf9G/[TH3])
+
+[role='middle']
+image::pj-powerman.jpg[]
+
+
+== \\
+
+* Site: {uri-finisherguru}
+** Apenas *"conteúdo humano"*:
+*** Pensamentos, comportamentos, ações, hábitos: coisas que vou aprendendo com os esportes ...
+*** A fazer: entrevistas com treinadores, nutricionistas, outros atletas
+* Twitter: http://twitter.com/finisherguru[@finisherguru]
+** Interaja fazendo comentários com https://twitter.com/hashtag/finisherguru[#finisherguru]!
+
+[{intro}]
+== finisher.*tech*
+
+== \\
+
+* Site: {uri-finishertech} (a publicar)
+** Idéias, soluções e howtos, associadas ao uso de tecnologias, para auxiliar *treinadores, nutricionistas e atletas (público alvo)*
+** Nos esportes: Triatlo (Natação, Ciclismo, Corrida) e Musculação
+** *"Conteúdo {geek} ({nerd})"* para um *público extra: desenvolvedores*
+* Twitter: http://twitter.com/finishertech[@finishertech]
+** Interaja fazendo comentários com https://twitter.com/hashtag/finishertech[#finishertech]!
+
+[{intro}]
+== *Por que?*
+
+[{intro}]
+== Porque eu vivo de *metas* e *desafios*!
+
+== \\
+
+image::pj-medalhas-relevantes.jpg[caption="", link="https://www.instagram.com/p/cjpAPwtf5N/"]
+
+== \\
+
+* Porque esses projetos me deixarão *focado* para atingir minhas metas
+* Porque eu estarei:
+** *Desenvolvendo soluções* para algo que amo (esportes)
+** *Produzindo conteúdo* para o livro {uri-livro-ironman}["Ironman: Pensamentos e Atitudes"]
+** *Ajudando pessoas* que me ajudam:
+*** {uri-eu-e-tadeu}[Meu amigo treinador] e {uri-tatianavasconcelos}[minha nutricionista]
+*** Outros atletas (principalmente os {uri-amigos-da-natacao}[meus amigos da natação])
+*** Outros desenvolvedores
+
+== \\
+
+image::pj-desenvolvedor-atleta.jpg[caption="Desenvolvedor atleta: algumas provas de 2016", link="https://www.instagram.com/p/BI-fVTXBOgC"]
+
+[{intro}]
+== *Metas*
+
+== \\
+
+* Relativas aos projetos:
+** Até *17/Ago/2016*:
+*** Reprojetar a arquitetura dos sites com tecnologias JavaScript (e/ou CoffeeScript)
+**** https://mongodb.org[MongoDB], http://expressjs.com/[Express], (https://angular.io/[Angular 2] + http://ionicframework.com/docs/v2/[Ionic 2]) ou https://onsen.io/[Onsen] ou ...
+*** Repulicar o site {finisherguru} com essa nova arquitetura
+*** Publicar a primeira versão do site {finishertech}
+
+== \\
+
+* Relativas aos projetos:
+** Até *27/Nov/2016* (final da http://www.epochconverter.com/weeks/2016[semana 47 de 2016]):
+*** registrar (*por dia e projeto*) *idéias e fatos*
+*** produzir e publicar (*por semana e projeto*) ao menos:
+**** 1 conteúdo grande e relevante em seus sites
+**** 6 tweets relevantes
+**** 2 vídeos curtos (de até 5 minutos cada)
+
+== \\
+
+* Relativas a provas esportivas (2016):
+** Em *11/Set*: concluir a https://www.centraldacorrida.com.br/maratonadebrasilia[Maratona de Brasília] em até 4 horas e 30 minutos
+*** Meu melhor tempo: *3h57min43s* (Maratona do Rio 2012 - nr. de peito 1521)
+** Em *18/Set*: concluir o http://www.letapebrasil.com.br/[L'Étape Brasil] (em tempo a ser definido)
+** Em *20/Nov*: concluir o http://www.ironmanbrasil.com.br/2016/for/br/[Ironman Fortaleza] em até 13 horas
+*** Tempo no Ironman de Florianópolis em 2013 (nr. de peito 1160): *12h56min47s*
+
+[{recap-final}]
+== Últimas palavras
+
+++++
+<hgroup>
+  <p>Pratique esportes e ganhe <a href="http://finisher.guru">pensamentos, atitudes e hábitos saudáveis</a>.
+  <p><a href="http://finisher.tech">Aprenda a usar as tecnologias</a> disponíveis e que podem te auxiliar na melhoraria de tuas práticas esportivas.
+</hgroup>
+++++
+
+[{ending}, hrole="name"]
+== Obrigado! Código fonte (slides):
+
+[role="footer"]
+http://github.com/paulojeronimo/finisher
+
+////
+Links ...
+Relato sobre o Ironman Nice 2014: https://www.facebook.com/photo.php?fbid=757943984228558&set=pb.100000388908507.-2207520000.1470926064.&type=3&theater
+Build a Mobile App with Angular 2 and Ionic 2: https://scotch.io/tutorials/build-a-mobile-app-with-angular-2-and-ionic-2
+////
+
+// vim: set syntax=asciidoc:
