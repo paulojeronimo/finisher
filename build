@@ -57,17 +57,18 @@ prepare() {
 build() {
   prepare
   
-  local not_linkcss
+  local embbeded
   mkdir -p "$TARGET"
   if [ "$1" == "--embbeded" ]
   then
-    embedded="-a data-uri -a linkcss!"
+    rm -rf "$TARGET"/*
+    embbeded="-a data-uri -a linkcss!"
   else
     rsync -a --update --delete ~/.asciidoc/backends/dzslides/dzslides "$TARGET"/
   fi
-  asciidoc $embedded index.asciidoc && \
+  asciidoc $embbeded index.asciidoc && \
   mv index.html "$TARGET"/
-  rsync -a --update --delete images "$TARGET"/
+  [ "$embbeded" ] && true || rsync -a --update --delete images "$TARGET"/
 }
 
 clean() {
