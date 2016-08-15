@@ -16,13 +16,17 @@ As configurações de diretórios padrão estão no arquivo [build.conf.sample].
 
   ./build
 
+## Visualização local dos slides
+
+Execute um servidor HTTP com o comando a seguir:
+
+  ./build server
+
+Abra o teu browser em http://localhost:3000 para ter acesso aos slides.
+
 ## Remoção dos slides gerados
 
   ./build clean
-
-## Visualização local dos slides
-
-  ./build server
 
 ## Aprenda mais ...
 
