@@ -22,7 +22,9 @@ Execute um servidor HTTP com o comando a seguir:
 
   ./build server
 
-Abra o teu browser em http://localhost:3000 para ter acesso aos slides.
+O parâmetro `--port 3000` poderia ter sido informando no comando acima. Só não foi pelo fato dessa ser a porta padrão em que o servidor HTTP é iniciado.
+
+Abra o teu browser em [http://localhost:3000](http://localhost:3000) para visualizar os slides.
 
 ## Remoção dos slides gerados
 
