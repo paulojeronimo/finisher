@@ -1,7 +1,3 @@
-# Repositórios DZSLIDES
-DZSLIDES_BACKEND=https://github.com/paulojeronimo/asciidoc-dzslides-backend
-DZSLIDES=https://github.com/paulojeronimo/dzslides
-
 # Diretório onde as páginas são construídas
 TARGET=target
 

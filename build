@@ -16,59 +16,20 @@ do
     source "$conf" && break || exit 1
   fi
 done
-[ "$DZSLIDES_BACKEND" ] || { echo "DZSLIDES_BACKEND não configurado!"; exit; }
-[ "$DZSLIDES" ] || { echo "DZSLIDES não configurado!"; exit; }
 [ "$TARGET" ] || { echo "TARGET não configurado!"; exit; }
 
-install_asciidoc() {
-  case $OSTYPE in
-    darwin*) brew install asciidoc;;
-    *) echo 'Por favor, instale o asciidoc!'; exit;;
-  esac
-}
-
-install_qrencode() {
-  case $OSTYPE in
-    darwin*) brew install qrencode;;
-    *) echo 'Por favor, instale o qrencode!'; exit;;
-  esac
-}
-
-prepare() {
-  which asciidoc > /dev/null || install_asciidoc
-  which qrencode > /dev/null || install_qrencode
-  pushd . &> /dev/null
-  mkdir -p ~/.asciidoc && cd $_
-  local f=qrcode-filter-1.0.zip
-  if ! [ -f $f ]
-  then
-      wget -c http://asciidoc-qrencode-filter.googlecode.com/files/$f
-      asciidoc --filter install $f
-  fi
-  mkdir -p ~/.asciidoc/backends && cd $_
-  if ! [ -d dzslides ]
-  then
-      git clone $DZSLIDES_BACKEND dzslides && cd $_
-      git clone $DZSLIDES
-  fi
-  popd &> /dev/null
+check_builder() {
+  [ -f builder/.git ] || git submodule update --init builder
 }
 
 build() {
-  prepare
-  
-  local embbeded
-  mkdir -p "$TARGET"
-  if [ "$1" == "--embbeded" ]
-  then
-    rm -rf "$TARGET"/*
-    embbeded="-a data-uri -a linkcss!"
-  else
-    rsync -a --update --delete ~/.asciidoc/backends/dzslides/dzslides "$TARGET"/
-  fi
-  asciidoc $embbeded index.asciidoc && \
-  mv index.html "$TARGET"/
-  [ "$embbeded" ] && true || rsync -a --update --delete images "$TARGET"/
+  check_builder
+  builder/dzslides/build "$@"
+}
+
+server() {
+  check_builder
+  builder/dzslides/build server "$@"
 }
 
 clean() {
@@ -94,6 +55,8 @@ create_gh_pages_branch() {
 publish_on_gh_pages() {
   publish_with_rsync
 
+  [ -f "$PUBLISHED/.git" ] || git submodule update --init "$PUBLISHED"
+
   local msg="Publicação em `date +"%d/%m/%Y às %H:%M:%S"`"
   cd "$PUBLISHED"
   git add .
@@ -110,23 +73,6 @@ publish_with_rsync() {
   [ -d "$PUBLISHED" ] || mkdir -p "$PUBLISHED"
   [ -d "$TARGET" ] || { echo "O diretório \"$TARGET\" não existe!"; return; }
   rsync -av --update --delete --exclude '.git' "$TARGET"/ "$PUBLISHED"/
-}
-
-server() {
-  local port=3000
-  while [ "$1" ] && [[ $1 == --* ]]
-  do
-    case $1 in
-      --port) shift; port=$1
-      [[ $port =~ ^[0-9]+$ ]] || { echo "Porta inválida!"; exit 1; }
-      ;;
-    esac
-    shift
-  done
-
-  cd "$TARGET" &>/dev/null
-  python -m SimpleHTTPServer $port
-  cd - &> /dev/null
 }
 
 cd "$BASEDIR"

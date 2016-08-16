@@ -2,3 +2,6 @@
 	path = published
 	url = https://github.com/paulojeronimo/finisher
 	branch = gh-pages
+[submodule "builder"]
+	path = builder
+	url = https://github.com/paulojeronimo/asciidoctor-builder
